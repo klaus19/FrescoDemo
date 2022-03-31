@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#75a478"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/apple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/apple"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textapplecount"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcherrycount"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cherry"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/cherry"></androidx.appcompat.widget.AppCompatImageView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/linear">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backgroundcolor"
+            android:text="Apple"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/player1Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/btnPlayer1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/anna" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player1Image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Olga"
+        android:textColor="#f44336"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/player2Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/txtName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/gabby" />
+
+    <TextView
+        android:id="@+id/txtName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player2Image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Gabby"
+        android:textColor="#f44336"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/backgroundcolor"
+            android:text="Cherry"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPlay"
+            android:layout_below="@id/btnPlayer2"
+            android:background="@drawable/backgroundcolor"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:text="Play"></androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
