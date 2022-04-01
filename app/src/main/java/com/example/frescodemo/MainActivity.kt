@@ -37,12 +37,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        with(binding) {
-            btnPlay.setOnClickListener {
-                createFight()
-                btnPlay.visibility = View.GONE
-            }
-        }
 
     }
 
@@ -60,19 +54,12 @@ class MainActivity : AppCompatActivity() {
             val i: Int = random.nextInt(hashPictures.size)
             val picture = hashPictures.toList()[i]
             binding.txtName.text = picture.first
-            binding.player1Image.setImageResource(picture.second.toIntOrNull() ?: 0)
+            binding.player2Image.setImageResource(picture.second.toIntOrNull() ?: 0)
         }
 
-        binding.btnPlayer2.visibility = View.GONE
-        visibility()
-
+        binding.btnPlayer2.text = "Shoot"
     }
 
-    private fun visibility() {
-        if (binding.btnPlayer1.visibility == View.GONE && binding.btnPlayer2.visibility == View.GONE) {
-            binding.btnPlay.visibility = View.VISIBLE
-        }
-    }
 
     private fun markRainbowplayer1() {
         val hashPictures: HashMap<String, String> = HashMap()
@@ -90,10 +77,7 @@ class MainActivity : AppCompatActivity() {
             binding.txtName.text = picture.first
             binding.player1Image.setImageResource(picture.second.toIntOrNull() ?: 0)
         }
-
-        binding.btnPlayer1.visibility = View.GONE
-        visibility()
-
+        binding.btnPlayer1.text = "Shoot"
     }
 
     //Creating a logic for fight between Apple and cherry
@@ -102,7 +86,6 @@ class MainActivity : AppCompatActivity() {
               binding.txtName.visibility = View.GONE
               binding.txtName2.visibility = View.GONE
 
-        ObjectAnimator.ofFloat(binding.player1Image,)
 
 
         }

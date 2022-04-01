@@ -60,12 +60,12 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/linear">
+        android:background="@drawable/grass">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnPlayer1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:background="@drawable/backgroundcolor"
@@ -81,17 +81,17 @@
             android:layout_marginTop="40dp"
             android:src="@drawable/anna" />
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/player1Image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Olga"
-        android:textColor="#f44336"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player1Image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Olga"
+            android:textColor="#f44336"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/player2Image"
@@ -102,22 +102,22 @@
             android:layout_marginTop="150dp"
             android:src="@drawable/gabby" />
 
-    <TextView
-        android:id="@+id/txtName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/player2Image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Gabby"
-        android:textColor="#f44336"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player2Image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Gabby"
+            android:textColor="#f44336"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnPlayer2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_below="@id/txtName2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
@@ -126,17 +126,6 @@
             android:text="Cherry"
             android:textColor="#FFFFFF" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnPlay"
-            android:layout_below="@id/btnPlayer2"
-            android:background="@drawable/backgroundcolor"
-            android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible"
-            android:gravity="center"
-            android:text="Play"></androidx.appcompat.widget.AppCompatButton>
 
     </RelativeLayout>
 
