@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.TranslateAnimation
 import androidx.core.graphics.rotationMatrix
 import androidx.core.util.toAndroidXPair
 import androidx.dynamicanimation.animation.DynamicAnimation
@@ -23,22 +24,39 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         //  setContentView(R.layout.activity_main)
+         markRainbowplayer1()
+        markRainbowplayer2()
 
-
-        with(binding) {
-            btnPlayer1.setOnClickListener {
-                markRainbowplayer1()
-            }
+        binding.btnPlayer1.setOnClickListener {
+            transitionGame()
         }
 
-        with(binding) {
-            btnPlayer2.setOnClickListener {
-                markRainbowplayer2()
-            }
+        binding.btnPlayer2.setOnClickListener {
+            transitionGame2()
         }
 
 
     }
+
+
+    private fun transitionGame() {
+        with(binding){
+            ObjectAnimator.ofFloat(token1Image,"translationY",175f).apply {
+                duration =200
+                start()
+            }
+        }
+    }
+
+    private fun transitionGame2() {
+        with(binding){
+            ObjectAnimator.ofFloat(token2Image,"translationY",-175f).apply {
+                duration =200
+                start()
+            }
+        }
+    }
+
 
     private fun markRainbowplayer2() {
         val hashPictures: HashMap<String, String> = HashMap()
@@ -53,11 +71,11 @@ class MainActivity : AppCompatActivity() {
             val random = Random
             val i: Int = random.nextInt(hashPictures.size)
             val picture = hashPictures.toList()[i]
-            binding.txtName.text = picture.first
+            binding.txtName1Player.text = picture.first
             binding.player2Image.setImageResource(picture.second.toIntOrNull() ?: 0)
         }
 
-        binding.btnPlayer2.text = "Shoot"
+
     }
 
 
@@ -74,19 +92,27 @@ class MainActivity : AppCompatActivity() {
             val random = Random
             val i: Int = random.nextInt(hashPictures.size)
             val picture = hashPictures.toList()[i]
-            binding.txtName.text = picture.first
+            binding.txtName2.text = picture.first
             binding.player1Image.setImageResource(picture.second.toIntOrNull() ?: 0)
         }
-        binding.btnPlayer1.text = "Shoot"
+
     }
 
     //Creating a logic for fight between Apple and cherry
 
     private fun createFight() {
-              binding.txtName.visibility = View.GONE
-              binding.txtName2.visibility = View.GONE
 
+         val game:HashMap<String, String> = HashMap()
+        game["Rock"] = ""+R.drawable.rock
+        game["Paper"]= ""+R.drawable.paper
+        game["Scissor"] = ""+R.drawable.scissors
 
+        for (key in game.keys) {
+            val random = Random
+            val j:Int = random.nextInt(game.size)
+            val pic = game.toList()[j]
+
+        }
 
         }
     }
